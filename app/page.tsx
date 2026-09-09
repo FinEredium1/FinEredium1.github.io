@@ -101,7 +101,7 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/fardin-ahmed-8582b9322" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
-          <a className="nav-cta" href="/Fardin-Ahmed-Resume.pdf?v=9.3" target="_blank" rel="noreferrer">Resume ↗</a>
+          <a className="nav-cta" href="/Fardin-Ahmed-Resume.pdf?v=2026-09-09" target="_blank" rel="noreferrer">Resume ↗</a>
         </div>
       </nav>
 
@@ -202,7 +202,7 @@ export default function Home() {
       <footer>
         <div className="wordmark footer-wordmark"><span>FA</span><strong>Fardin Ahmed</strong></div>
         <p>Software engineering · AI systems · Machine learning</p>
-        <div><a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub</a><a href="/Fardin-Ahmed-Resume.pdf?v=9.3" target="_blank" rel="noreferrer">Resume</a><a href="#top">Back to top ↑</a></div>
+        <div><a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub</a><a href="/Fardin-Ahmed-Resume.pdf?v=2026-09-09" target="_blank" rel="noreferrer">Resume</a><a href="#top">Back to top ↑</a></div>
       </footer>
     </main>
   );
