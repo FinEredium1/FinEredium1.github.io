@@ -1,6 +1,8 @@
+import Image from 'next/image';
+
 const projects = [
   {
-    number: '01',
+    number: '03',
     name: 'Terminus',
     label: 'Local AI / Systems',
     description: 'A privacy-first Windows diagnostic agent that pairs a local Gemma model with a bounded ReAct loop, typed read-only tools, and risk-labelled command cards.',
@@ -12,7 +14,7 @@ const projects = [
     visual: 'terminal',
   },
   {
-    number: '02',
+    number: '04',
     name: 'TickerPilot',
     label: 'ML / Quant Research',
     description: 'A research-grade, long-only stock ranking pipeline built around point-in-time universe selection, walk-forward validation, transaction costs, and fail-closed data checks.',
@@ -24,7 +26,7 @@ const projects = [
     visual: 'chart',
   },
   {
-    number: '03',
+    number: '01',
     name: 'SafeLight',
     label: 'Security / Full Stack',
     description: 'An encrypted messaging product with per-message X25519 key exchange, AES-256-GCM sealed envelopes, a password-derived key vault, and safety-number verification.',
@@ -36,33 +38,33 @@ const projects = [
     visual: 'lock',
   },
   {
-    number: '04',
+    number: '02',
     name: 'OmniDetect',
     label: 'Applied Machine Learning',
     description: 'A multimodal AI-content detector spanning text, image, and audio. I built the leakage-safe TF-IDF and LinearSVC text pipeline for the five-person team.',
     metric: '96.93% text accuracy',
-    strengths: ['Leakage-safe splits', '464K unseen samples', 'Three data modalities'],
+    strengths: ['Leakage-safe splits', '450K+ unseen samples', 'Three data modalities'],
     tags: ['scikit-learn', 'PyTorch', 'librosa', 'TF-IDF'],
     github: 'https://github.com/FinEredium1/OmniDetect',
     live: null,
     visual: 'scan',
   },
-];
+].sort((a, b) => a.number.localeCompare(b.number));
 
 const roles = [
   {
-    date: 'May 2026 - Present',
+    date: 'May 2026 - Aug 2026',
     company: 'Cisco Systems',
     role: 'Software Engineering Intern',
     location: 'San Jose, CA',
-    detail: 'Shipping an air-gapped, MCP-based network operations agent: 92% accurate tool calls, 112 automated test modules, and a 42% reduction in model memory.',
+    detail: 'Built and shipped a local AI agent for network diagnostics in air-gapped environments, adopted by 200+ Cisco engineers. Combined structured diagnostic tools, command retrieval, and a fine-tuned Gemma model.',
   },
   {
     date: 'Jan 2026 - Present',
     company: 'Georgia Tech VIP',
     role: 'Undergraduate Researcher',
     location: 'Atlanta, GA',
-    detail: 'Researching multivariate economic forecasting across 126 FRED-MD series; increased TinyTimeMixer capacity and reduced forecasting MSE from 1.826 to 0.315.',
+    detail: 'Researching economic forecasting with TinyTimeMixer and benchmarking time-series models across 120+ FRED-MD macroeconomic series.',
   },
   {
     date: 'May 2025 - Aug 2025',
@@ -88,51 +90,50 @@ function ProjectVisual({ type }: { type: string }) {
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
       <nav className="nav-shell" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Fardin Ahmed, home"><span>FA</span><strong>Fardin Ahmed</strong></a>
         <div className="nav-links">
-          <a href="#work">Work</a>
-          <a href="#experience">Experience</a>
-          <a href="#about">About</a>
-          <a className="nav-cta" href="/Fardin-Ahmed-Resume.pdf" target="_blank">Resume ↗</a>
+          <a className="nav-section-link" href="#work">Work</a>
+          <a className="nav-section-link" href="#experience">Experience</a>
+          <a className="nav-section-link" href="#about">About</a>
+          <div className="nav-socials" aria-label="Social profiles">
+            <a href="https://www.linkedin.com/in/fardin-ahmed-8582b9322" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <a className="nav-cta" href="/Fardin-Ahmed-Resume.pdf?v=9.3" target="_blank" rel="noreferrer">Resume ↗</a>
         </div>
       </nav>
 
-      <section className="hero" id="top">
+      <section className="hero" aria-labelledby="hero-title">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <div className="eyebrow"><span /> Software engineer + AI systems builder</div>
-          <h1>I build intelligent systems that hold up in the real world.</h1>
-          <p className="hero-lede">Georgia Tech CS student and software engineer working across local AI agents, systems programming, machine learning, and secure full-stack products.</p>
+          <div className="eyebrow"><span /> Georgia Tech · Class of 2027</div>
+          <h1 id="hero-title">Software &amp;<br />AI Engineer</h1>
+          <p className="hero-lede">Computer Science student at Georgia Tech with Agentic AI, network automation, C++ backend, and full-stack engineering experience at Cisco and SAIC.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
-            <a className="button button-secondary" href="mailto:fahmed71@gatech.edu">Start a conversation <span aria-hidden="true">↗</span></a>
-          </div>
-          <div className="proof-row" aria-label="Career highlights">
-            <div><strong>92%</strong><span>accurate agent tool use</span></div>
-            <div><strong>42%</strong><span>lower model memory</span></div>
-            <div><strong>83%</strong><span>lower forecasting MSE</span></div>
+            <a className="button button-primary" href="#work">View projects <span aria-hidden="true">↘</span></a>
+            <a className="button button-secondary" href="mailto:fahmed71@gatech.edu">Get in touch <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <aside className="portrait-wrap" aria-label="Portrait of Fardin Ahmed">
-          <div className="portrait-frame"><img src="/fardin-ahmed.png" alt="Fardin Ahmed in a navy suit" /></div>
+          <div className="portrait-frame"><Image src="/fardin-ahmed.png" alt="Fardin Ahmed in a navy suit" width={1284} height={2778} priority /></div>
           <div className="availability-card"><span className="status-dot" /><div><strong>Based in Atlanta</strong><small>Open to 2027 new grad roles</small></div></div>
         </aside>
       </section>
 
       <section className="recognition-strip" aria-label="Current and previous organizations">
-        <span>Currently at</span><strong>CISCO</strong><i /><span>Research at</span><strong>GEORGIA TECH</strong><i /><span>Previously</span><strong>SAIC</strong>
+        <span>Internships at</span><strong>CISCO</strong><i /><strong>SAIC</strong><i /><span>Research at</span><strong>GEORGIA TECH</strong>
       </section>
 
       <section className="section-shell work-section" id="work">
         <div className="section-heading">
-          <div><span className="section-index">02 / SELECTED WORK</span><h2>Systems with a point of view.</h2></div>
-          <p>Four projects that show how I think: define the failure modes, build the measurable core, and make the result useful.</p>
+          <div><span className="section-index">02 / SELECTED WORK</span><h2>Selected projects.</h2></div>
+          <p>Encrypted messaging, AI-content detection, local agents, and stock-ranking research.</p>
         </div>
         <div className="project-grid">
           {projects.map((project) => (
-            <article className={`project-card ${project.number === '01' || project.number === '02' ? 'project-wide' : ''}`} key={project.name}>
+            <article className="project-card" key={project.name}>
               <div className="project-topline"><span>{project.number}</span><span>{project.label}</span><span>2026</span></div>
               <ProjectVisual type={project.visual} />
               <div className="project-copy">
@@ -160,8 +161,8 @@ export default function Home() {
       <section className="experience-section" id="experience">
         <div className="section-shell">
           <div className="section-heading light-heading">
-            <div><span className="section-index">03 / EXPERIENCE</span><h2>Production lessons, research depth.</h2></div>
-            <p>From network diagnostics to defense systems to economic forecasting, I&apos;m most at home where correctness matters.</p>
+            <div><span className="section-index">03 / EXPERIENCE</span><h2>Where I&apos;ve worked.</h2></div>
+            <p>Software engineering at Cisco and SAIC. Machine learning research at Georgia Tech.</p>
           </div>
           <div className="timeline">
             {roles.map((role, index) => (
@@ -179,10 +180,10 @@ export default function Home() {
       <section className="section-shell about-section" id="about">
         <div className="about-intro">
           <span className="section-index">04 / HOW I WORK</span>
-          <p className="about-statement">I like hard constraints, measurable outcomes, and software that earns trust through its behavior.</p>
+          <p className="about-statement">My work spans local AI agents, C++ systems, and web applications.</p>
         </div>
         <div className="about-grid">
-          <div className="about-card acid-card"><span>Current focus</span><h3>Small models.<br />Useful agents.<br />Strong guardrails.</h3><p>Exploring how local models can reason over real systems without turning safety into an afterthought.</p></div>
+          <div className="about-card focus-card"><span>Current focus</span><h3>Local models<br />and AI agents.</h3><p>Exploring how small models can help diagnose real systems with clear limits on the tools they can use.</p></div>
           <div className="stack-card"><span>Working set</span><div className="stack-list">{['Python', 'C / C++', 'JavaScript', 'Go', 'React', 'Node.js', 'PyTorch', 'PostgreSQL', 'Linux', 'AWS'].map((skill, index) => <b key={skill}><i>{String(index + 1).padStart(2, '0')}</i>{skill}</b>)}</div></div>
           <div className="education-card"><span>Education</span><strong>Georgia Institute<br />of Technology</strong><p>B.S. Computer Science<br />Expected May 2027</p><small>Atlanta, Georgia</small></div>
         </div>
@@ -191,7 +192,7 @@ export default function Home() {
       <section className="contact-section">
         <div className="contact-orbit" aria-hidden="true"><i /><i /><i /></div>
         <span className="section-index">05 / CONTACT</span>
-        <h2>Let&apos;s build something<br />that survives contact<br />with reality.</h2>
+        <h2>Let&apos;s talk.</h2>
         <div className="contact-actions">
           <a className="button button-primary" href="mailto:fahmed71@gatech.edu">fahmed71@gatech.edu <span>↗</span></a>
           <a className="button dark-button" href="https://www.linkedin.com/in/fardin-ahmed-8582b9322" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
@@ -201,7 +202,7 @@ export default function Home() {
       <footer>
         <div className="wordmark footer-wordmark"><span>FA</span><strong>Fardin Ahmed</strong></div>
         <p>Software engineering · AI systems · Machine learning</p>
-        <div><a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub</a><a href="/Fardin-Ahmed-Resume.pdf" target="_blank">Resume</a><a href="#top">Back to top ↑</a></div>
+        <div><a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub</a><a href="/Fardin-Ahmed-Resume.pdf?v=9.3" target="_blank" rel="noreferrer">Resume</a><a href="#top">Back to top ↑</a></div>
       </footer>
     </main>
   );

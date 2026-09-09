@@ -1,17 +1,20 @@
 import type { Metadata } from 'next';
-import { Manrope, Space_Mono } from 'next/font/google';
 import './globals.css';
 
-const manrope = Manrope({ variable: '--font-manrope', subsets: ['latin'] });
-const spaceMono = Space_Mono({ variable: '--font-space-mono', weight: ['400', '700'], subsets: ['latin'] });
+const siteTitle = 'Fardin Ahmed | Software & AI Engineer';
+const siteDescription = 'Computer Science student at Georgia Tech with Agentic AI, network automation, C++ backend, and full-stack engineering experience at Cisco and SAIC.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fineredium1.github.io'),
-  title: 'Fardin Ahmed - Software Engineer & AI Systems Builder',
-  description: 'Portfolio of Fardin Ahmed, a Georgia Tech computer science student building reliable AI agents, systems software, and secure products.',
+  title: siteTitle,
+  description: siteDescription,
+  icons: {
+    icon: [{ url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' }],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
-    title: 'Fardin Ahmed - Software Engineer & AI Systems Builder',
-    description: 'AI systems, software engineering, and machine learning projects built for the real world.',
+    title: siteTitle,
+    description: siteDescription,
     url: 'https://fineredium1.github.io',
     siteName: 'Fardin Ahmed',
     images: [{ url: '/og.png', width: 1536, height: 864, alt: 'Fardin Ahmed - AI Systems, Software Engineering, Machine Learning' }],
@@ -19,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fardin Ahmed - Software Engineer & AI Systems Builder',
-    description: 'AI systems, software engineering, and machine learning projects built for the real world.',
+    title: siteTitle,
+    description: siteDescription,
     images: ['/og.png'],
   },
 };
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${spaceMono.variable}`}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
