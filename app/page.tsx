@@ -94,15 +94,15 @@ export default function Home() {
       <nav className="nav-shell" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Fardin Ahmed, home"><span>FA</span><strong>Fardin Ahmed</strong></a>
         <div className="nav-links">
+          <a className="nav-section-link" href="#publication">Publication</a>
           <a className="nav-section-link" href="#work">Work</a>
           <a className="nav-section-link" href="#experience">Experience</a>
-          <a className="nav-section-link" href="#publication">Publication</a>
           <a className="nav-section-link" href="#about">About</a>
           <div className="nav-socials" aria-label="Social profiles">
             <a href="https://www.linkedin.com/in/fardin-ahmed-8582b9322" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           </div>
-          <a className="nav-cta" href="/Fardin-Ahmed-Resume.pdf?v=9.5" target="_blank" rel="noreferrer">Resume ↗</a>
+          <a className="nav-cta" href="/Fardin-Ahmed-Resume.pdf?v=9.5-final" target="_blank" rel="noreferrer">Resume ↗</a>
         </div>
       </nav>
 
@@ -127,9 +127,28 @@ export default function Home() {
         <span>Internships at</span><strong>CISCO</strong><i /><strong>SAIC</strong><i /><span>Research at</span><strong>GEORGIA TECH</strong>
       </section>
 
+      <section className="publication-section" id="publication">
+        <div className="section-shell publication-shell">
+          <div className="section-heading">
+            <div><span className="section-index">02 / PUBLICATION</span><h2>Published research.</h2></div>
+            <p>Work on replayable environments for evaluating and training forecasting agents over time.</p>
+          </div>
+          <article className="publication-card">
+            <div className="publication-meta"><span>arXiv preprint · cs.AI</span><time dateTime="2026-09-24">September 2026</time></div>
+            <h3>Forecast-Dojo: Replayable Environments for Benchmarking and Training LLM Forecasting Agents</h3>
+            <p className="publication-authors">Liqin Ye, Haorui Wang, <strong>Fardin Ahmed</strong>, Rongzhi Zhang, Yuan He, Ziyuan Lin, Yanbin Yin, Jing Peng, Michael Galarnyk, Sudheer Chava, and Chao Zhang</p>
+            <p className="publication-summary">A replayable environment that pairs 1,568 resolved prediction-market events with 18.8 million dated news articles, enabling controlled evaluation and training of LLM forecasting agents.</p>
+            <div className="publication-footer">
+              <span>arXiv:2609.28876v1</span>
+              <a href="https://arxiv.org/html/2609.28876v1" target="_blank" rel="noreferrer">Read publication <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="section-shell work-section" id="work">
         <div className="section-heading">
-          <div><span className="section-index">02 / SELECTED WORK</span><h2>Selected projects.</h2></div>
+          <div><span className="section-index">03 / SELECTED WORK</span><h2>Selected projects.</h2></div>
           <p>Encrypted messaging, AI-content detection, local agents, and stock-ranking research.</p>
         </div>
         <div className="project-grid">
@@ -162,7 +181,7 @@ export default function Home() {
       <section className="experience-section" id="experience">
         <div className="section-shell">
           <div className="section-heading light-heading">
-            <div><span className="section-index">03 / EXPERIENCE</span><h2>Where I&apos;ve worked.</h2></div>
+            <div><span className="section-index">04 / EXPERIENCE</span><h2>Where I&apos;ve worked.</h2></div>
             <p>Software engineering at Cisco and SAIC. Machine learning research at Georgia Tech.</p>
           </div>
           <div className="timeline">
@@ -175,25 +194,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="publication-section" id="publication">
-        <div className="section-shell publication-shell">
-          <div className="section-heading">
-            <div><span className="section-index">04 / PUBLICATION</span><h2>Published research.</h2></div>
-            <p>Work on replayable environments for evaluating and training forecasting agents over time.</p>
-          </div>
-          <article className="publication-card">
-            <div className="publication-meta"><span>arXiv preprint · cs.AI</span><time dateTime="2026-09-24">September 2026</time></div>
-            <h3>Forecast-Dojo: Replayable Environments for Benchmarking and Training LLM Forecasting Agents</h3>
-            <p className="publication-authors">Liqin Ye, Haorui Wang, <strong>Fardin Ahmed</strong>, Rongzhi Zhang, Yuan He, Ziyuan Lin, Yanbin Yin, Jing Peng, Michael Galarnyk, Sudheer Chava, and Chao Zhang</p>
-            <p className="publication-summary">A replayable environment that pairs 1,568 resolved prediction-market events with 18.8 million dated news articles, enabling controlled evaluation and training of LLM forecasting agents.</p>
-            <div className="publication-footer">
-              <span>arXiv:2609.28876v1</span>
-              <a href="https://arxiv.org/html/2609.28876v1" target="_blank" rel="noreferrer">Read publication <span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
         </div>
       </section>
 
@@ -222,7 +222,7 @@ export default function Home() {
       <footer>
         <div className="wordmark footer-wordmark"><span>FA</span><strong>Fardin Ahmed</strong></div>
         <p>Software engineering · AI systems · Machine learning</p>
-        <div><a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub</a><a href="#publication">Publication</a><a href="/Fardin-Ahmed-Resume.pdf?v=9.5" target="_blank" rel="noreferrer">Resume</a><a href="#top">Back to top ↑</a></div>
+        <div><a href="https://github.com/FinEredium1" target="_blank" rel="noreferrer">GitHub</a><a href="#publication">Publication</a><a href="/Fardin-Ahmed-Resume.pdf?v=9.5-final" target="_blank" rel="noreferrer">Resume</a><a href="#top">Back to top ↑</a></div>
       </footer>
     </main>
   );
